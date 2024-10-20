@@ -1,0 +1,3 @@
+[submodule "FGTD"]
+	path = FGTD
+	url = https://github.com/kad99kev/FGTD.git
