@@ -1,38 +1,122 @@
+/* General App Styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  height: 100vh; /* Ensures the page takes full screen height */
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background: linear-gradient(135deg, #9bb5ef, #b4d3ea);
+  background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/houndstooth-pattern.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100%; /* Ensures header takes full height */
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: #1c2938; /* A professional dark blue-gray for text */
+  font-family: 'Roboto', sans-serif; /* Clean and professional font */
+}
+
+/* Add padding around content and align them */
+.Header-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.Logo-container {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Logo-container svg {
+  margin-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App-title {
+  color: #54b3f8; 
+  margin: 5px 5px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.Content-wrapper {
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Textarea Styles */
+textarea {
+  width: 80%;
+  max-width: 600px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+  transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #54b3f8;
+  outline: none;
+  box-shadow: 0 0 5px rgba(97, 218, 251, 0.5);
+}
+
+/* Button Styles */
+button {
+  background-color: #54b3f8;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #4ca3c7;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Image Section */
+img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* Footer Section */
+footer {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  textarea {
+    width: 90%;
   }
-  to {
-    transform: rotate(360deg);
+
+  h1 {
+    font-size: 2rem;
   }
 }
